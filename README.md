@@ -1,116 +1,114 @@
 🌱 Crop Disease Detection System
-📌 Overview
 
-This mini-project is an AI-powered Crop Disease Detection System that leverages Deep Learning to identify plant diseases from images.
-It is designed to help farmers and researchers detect crop diseases early, ensuring better yield and reduced losses.
-
-The project includes:
-
-📊 Model Training (Train.ipynb)
-
-🧪 Model Testing (Test.ipynb)
-
-🚀 Deployment Script (main.py)
-
-📈 Training Logs (training_hist.json)
+An AI-powered web application that detects plant diseases from leaf images using Deep Learning.
+The system provides real-time predictions, helping farmers and researchers identify crop health issues early and take preventive measures.
 
 🚀 Features
 
-🌿 Upload crop/leaf images and get instant disease detection results.
+Disease Detection
+Upload an image of a crop leaf and get instant predictions with confidence scores.
 
-🧠 Built using Convolutional Neural Networks (CNNs) for image classification.
+Wide Crop Coverage
+Supports multiple plants including Apple, Corn, Grape, Potato, Tomato, and more.
 
-📉 Training history and evaluation metrics available for model improvement.
+Deep Learning Model
+Built using TensorFlow/Keras CNN trained on the PlantVillage dataset.
 
-🖥️ Easy to use deployment with a Python script (main.py).
+Interactive Web App
+Developed with Streamlit for a user-friendly, responsive interface.
 
-🛠️ Tech Stack
+Training Insights
+Includes training history (training_hist.json) with accuracy and loss metrics.
 
-Programming Language: Python 🐍
+📊 Model Performance
 
-Deep Learning: TensorFlow / Keras
+Training Accuracy: 98%
 
-Data Handling: NumPy, Pandas
+Validation Accuracy: 97%
 
-Visualization: Matplotlib, Seaborn
+Validation Loss: 0.17
 
-Deployment: Streamlit / Flask (if used in main.py)
+📈 Accuracy improves steadily across epochs, with minimal overfitting.
 
 📂 Project Structure
-├── Train.ipynb          # Notebook for training the CNN model
-├── Test.ipynb           # Notebook for testing & evaluation
-├── main.py              # Deployment script for inference
-├── training_hist.json   # Training history (loss & accuracy logs)
-├── requirements.txt     # Dependencies (if needed)
-└── README.md            # Documentation (this file)
+├── main.py                 # Streamlit web app for prediction
+├── Train.ipynb             # Jupyter Notebook for training the CNN model
+├── Test.ipynb              # Jupyter Notebook for testing/evaluating the model
+├── training_hist.json      # Training history (accuracy, loss, val_accuracy, val_loss)
+├── trained_plant_disease_model.keras  # Saved trained model (to be generated after training)
+└── README.md               # Project documentation
 
-⚙️ Installation & Setup
+⚙ Installation
 
-Clone the repository
+Clone the repository:
 
 git clone https://github.com/your-username/crop-disease-detection.git
 cd crop-disease-detection
 
 
-Create virtual environment (recommended)
+Create a virtual environment (recommended):
 
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 
 
-Install dependencies
+Install dependencies:
 
 pip install -r requirements.txt
 
+▶ Usage
 
-Run training (optional)
+Train the model (if not already trained):
 
-jupyter notebook Train.ipynb
+Open and run Train.ipynb to train the CNN model.
+
+The trained model will be saved as trained_plant_disease_model.keras.
+
+Run the app:
+
+streamlit run main.py
 
 
-Run testing
+Use the Web App:
 
-jupyter notebook Test.ipynb
+Go to the Disease Detection page.
+
+Upload a leaf image (jpg/png).
+
+Click Predict to see the detected disease and confidence score.
+
+🧑‍💻 Tech Stack
+
+Frontend/UI: Streamlit
+
+Deep Learning: TensorFlow, Keras
+
+Data Handling: NumPy, Pandas
+
+Image Processing: PIL
+
+Visualization: Matplotlib (for training insights)
+
+🌾 Supported Classes
+
+Apple: Apple Scab, Black Rot, Cedar Apple Rust, Healthy
+
+Corn (Maize): Cercospora Leaf Spot, Common Rust, Northern Leaf Blight, Healthy
+
+Grape: Black Rot, Esca, Leaf Blight, Healthy
+
+Potato: Early Blight, Late Blight, Healthy
+
+Tomato: Bacterial Spot, Early/Late Blight, Leaf Mold, Septoria, Target Spot, Yellow Leaf Curl Virus, Mosaic Virus, Healthy
+
+Others: Blueberry, Cherry, Orange, Peach, Pepper, Raspberry, Soybean, Squash, Strawberry
 
 
-Run deployment script
+🌟 Acknowledgements
 
-python main.py
+PlantVillage Dataset
 
-📊 Usage
+TensorFlow/Keras for deep learning
 
-Prepare your dataset of crop images (healthy & diseased).
-
-Train the CNN model using Train.ipynb.
-
-Evaluate the model on test data using Test.ipynb.
-
-Use main.py to predict diseases from new crop images.
-
-📈 Training History
-
-The file training_hist.json contains accuracy and loss logs from model training.
-You can visualize it with Matplotlib/Seaborn for deeper analysis.
-
-🌾 Applications
-
-Early disease detection in crops.
-
-Precision agriculture & smart farming.
-
-Reducing crop yield losses.
-
-Assisting farmers with AI-driven insights.
-
-🤝 Contribution
-
-Contributions are welcome!
-
-Fork the repo
-
-Create a new branch (feature-branch)
-
-Commit your changes
-
-Open a Pull Request
+Streamlit for interactive app deployment
