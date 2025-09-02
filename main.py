@@ -57,7 +57,7 @@ app_mode = st.sidebar.selectbox("Select Page", ["Home", "About", "Disease Detect
 # Main Page
 if app_mode == "Home":
     st.header("🌱 Plant Disease Detection System 🌱")
-    st.image(r"C:\Users\anvit\Downloads\Plant disease\Streamlit-demo\farmer.jpg", width=300)  # Adjust the width as per your requirement
+    st.image(r"C:\Users\hp\Downloads\farmer.png", width=300)  # Adjust the width as per your requirement
     st.markdown("""
     Welcome to the **Plant Disease Detection System**! 🌿🔍
     This tool uses advanced machine learning techniques to help you identify plant diseases.
@@ -134,4 +134,5 @@ elif app_mode == "Disease Detection":
                 else:
                     st.warning("⚠️ The model is not confident enough in its prediction. Please try another image.")
     else:
+
         st.info("📁 Please upload an image to get a prediction.")
